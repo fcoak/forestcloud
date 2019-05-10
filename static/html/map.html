@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>Display a map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+        <link href="../css/treesmap.css" rel="stylesheet" />
+         <style>
+        body { margin:0; padding:0; }
+        #map { position:static; top:0; bottom:0; width:100%; }
+        </style>
+    </head>
+        <body>
+        <div id="map" >
+        </div>
+        <br>
+        <input type="button" name="load trees" onclick="loadtrees();" value="load trees">
+        <div id="trees">
+        </div>
+        <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiZm9yZXN0Y2xvdWQiLCJhIjoiY2p1ZWl2bHo3MDQwZTQ5cHBqaGJhaWMxcSJ9.PUjvgWawvzNF1b5YWblMzQ';
+        var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/satellite-v9', // stylesheet location
+        center: [-122.27, 37.80], // starting position [lng, lat]
+        zoom: 12 // starting zoom
+        });
+        </script>
+        <script src="../js/newoaktrees.js"  type="application/javascript"></script>
+    </body>
+</html>

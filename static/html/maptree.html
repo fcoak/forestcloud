@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <meta charset='utf-8' />
+        <title>Display a map</title>
+        <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+        <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+        <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+        <link href="../css/treesmap.css" rel="stylesheet" />
+        <style>
+            body { margin:0; padding:0; }
+            #map { position:static; top:0; bottom:0; width:50%; }
+        </style>
+        <style>
+            #marker {
+            background-image: url('https://docs.mapbox.com/mapbox-gl-js/assets/washington-monument.jpg');
+            background-size: cover;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            }
+            .mapboxgl-popup {
+            max-width: 200px;
+            }
+
+        </style>
+
+    </head>
+        <body>
+            <div id="map" >
+            </div>
+            <form action="/sendtree" method="post" target="_blank">
+                <div id="treedata">
+                    <label> specie </label><input type="text" id="sp"><br>
+                    <label> latitude </label><input type="text" id="lat"><br>
+                    <label> longitude </label><input type="text" id="lon"><br>
+                    <label> altitude </label><input type="text" id="alt"><br>
+                    <label> mate </label><input type="text" id="mate"><br>
+                    <input type="button"  value="map it" onclick="maptree();">
+                    <input type="submit">
+                </div>
+           </form>
+                    
+        <script>
+            mapboxgl.accessToken = 'pk.eyJ1IjoiZm9yZXN0Y2xvdWQiLCJhIjoiY2p1ZWl2bHo3MDQwZTQ5cHBqaGJhaWMxcSJ9.PUjvgWawvzNF1b5YWblMzQ';
+            var map = new mapboxgl.Map({
+            container: 'map', // container id
+            style: 'mapbox://styles/mapbox/satellite-v9', // stylesheet location
+            center: [-122.256634, 37.861160], // starting position [lng, lat]37.770461, -122.244432  37.861160, -122.256634
+
+            zoom: 18 // starting zoom
+            });
+
+            map.on('click',  function (e) {
+                ellat=document.getElementById("lat");//reference to input element
+                ellon=document.getElementById("lon");//reference to input elemen
+                ellat.value=e.lngLat.lat;// asign latitude to input element
+                ellon.value=e.lngLat.lng;//asing longitude to input element
+                //add geojson source for the point into the map
+                map.addSource('tree', {
+                   type: 'geojson',
+                   data: {
+                       "type": "FeatureCollection",
+                       "features": [{
+                           "type": "Feature",
+                           "properties": {
+                               "title": "Tree",
+                                "icon": "monument"
+                           },
+                           "geometry": {
+                               "type": "Point",
+                               "coordinates": [
+                                   e.lngLat.lng,
+                                   e.lngLat.lat
+                               ]
+                           }
+                       }]
+                   }
+                });
+                
+            });
+            function maptree(e){
+                ellat=document.getElementById("lat").value;
+                ellon=document.getElementById("lon").value;
+                elalt=document.getElementById("alt").value;
+                elmate=document.getElementById("mate").value;
+
+            // create the popup
+            var popup = new mapboxgl.Popup({ offset: 25 })
+            .setText('Construction on the Washington Monument began in 1848.');
+            var popup = new mapboxgl.Popup({closeOnClick: false})
+            .setLngLat([-96, 37.8])
+            .setHTML('<h1>Hello World!</h1>')
+            .addTo(map);
+
+            // create DOM element for the marker
+            var el = document.createElement('div');
+            el.id = 'marker';
+
+            // create the marker
+            new mapboxgl.Marker(el)
+            .setLngLat(monument)
+            .setPopup(popup) // sets a popup on this marker
+            .addTo(map);
+
+            }
+        </script>
+    </body>
+</html>

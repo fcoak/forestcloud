@@ -1,0 +1,216 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="container">
+        </div>
+    </body>
+    <script type="application/javascript">
+        var Taxa={
+    "life":
+        {
+            "type":"",
+            "definition":"organisms are able to reproduce",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/d/da/Ruwenpflanzen.jpg",
+            "parent":"none",
+            "children":[
+                "non-Cellular",
+                "Cellular"
+            ]
+        },
+    "Cellular":
+        {
+            "type":"",
+            "definition":"A cell is the smallest unit of life.",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/3/37/Wilson1900Fig2.jpg",
+            "parent":"life",
+            "children":[
+                "Bacteria",
+                "Archaea",
+                "Eukarya"
+            ]
+        },
+    "non-Cellular":
+        {
+            "type":"",
+            "definition":"Non-Cellular life, or aCellular life is life that exists without a Cellular structure for at least part of its life cycle.",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Rotavirus_Reconstruction.jpg/1920px-Rotavirus_Reconstruction.jpg",
+            "parent":"life",
+        },
+    "Bacteria":
+        {
+            "type":"Domain",
+            "definition":" prokaryotic microorganism",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/3/32/EscherichiaColi_NIAID.jpg",
+            "parent":"Cellular",
+        },
+    "Archaea":
+        {
+            "type":"Domain",
+            "definition":"Archaea and bacteria are generally similar in size and shape, although a few archaea have shapes quite unlike that of bacteria, such as the flat and square-shaped cells of Haloquadratum walsbyi Despite this morphological similarity to bacteria, archaea possess genes and several metabolic pathways that are more closely related to those of eukaryotes",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/a/a1/Halobacteria.jpg",
+            "parent":"Cellular",
+        },
+    "Eukarya":
+        {
+            "type":"Domain",
+            "definition":" Organisms whose cells have a nucleus enclosed within membranes",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/7/7d/Eukaryota_diversity_2.jpg",
+            "parent":"Cellular",
+            "children":[
+                "Plantae",
+                "Animalia",
+                "Fungae",
+            ]
+        },
+    "Plantae":
+        {
+            "type":"",
+            "definition":"The term plant generally implies the possession of the following traits multiCellularity, possession of cell walls containing cellulose and the ability to carry out photosynthesis with primary chloroplasts", "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Diversity_of_plants_image_version_5.png/440px-Diversity_of_plants_image_version_5.png",
+            "parent":"life",
+            "children":[
+                "Algae",
+                "Streptophyta"
+            ]
+        },
+    "Animalia":
+        {
+            "type":"",
+            "definition":"Animals are eukaryotic, multiCellular,heterotrophic, feeding on organic material and digesting it internally and  breathe oxygen",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/1/14/Animal_diversity.png",
+            "parent":"life",
+        },
+    "Algae":
+        {
+            "type":"",
+            "definition":" plantas acuaticas no vasculares", "image":"https://upload.wikimedia.org/wikipedia/commons/4/42/Stigeoclonium_sp_zugespitzte_seitenzweige.jpeg",
+            "parent":"Plantae",
+        },
+    "Streptophyta":
+        {
+            "type":"",
+            "definition":"Plantas terrestres",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/5/5d/Streptophyta-x4.jpg",
+            "parent":"Plantae",
+            "children":[
+                "Bryophyte",
+                "Tracheophyte",
+                "Spermatophyte"
+            ]
+        },
+    "Bryophyte":
+        {
+            "type":"",
+            "definition":"non vascular plant",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Tionesta-ac-moss2.jpg/1920px-Tionesta-ac-moss2.jpg",
+            "parent":"Streptophyta",
+        },
+    "Tracheophyte":
+        {
+            "type":"",
+            "definition":"Vascular plant ", "image":"https://upload.wikimedia.org/wikipedia/commons/8/80/Ferns_at_melb_botanical_gardens.jpg",
+            "parent":"Streptophyta",
+        },
+    "Spermatophyte":
+        {
+            "type":"",
+            "definition":"plant with seeds",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/b/bc/PinusSylvestris.jpg",
+            "parent":"Streptophyta",
+            "children":[
+                "Cydadophyte",
+                "Pinophyta",
+                "Ginkophyta",
+                "Gnetophyta",
+                "Magnoliophyta",
+            ]
+        },
+    "Cydadophyte":
+        {
+            "type":"clade",
+            "definition":"The leaves grow in a rosette form, with new foliage emerging from the top and center of the crown. The trunk may be buried, so the leaves appear to be emerging from the ground, so the plant appears to be a basal rosette. The leaves are generally large in proportion to the trunk size, and sometimes even larger than the trunk.", "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Cycas_circinalis.jpg/1024px-Cycas_circinalis.jpg",
+            "parent":"Spermatophyte"
+        },
+    "Pinophyta":
+        {
+            "type":"clade",
+            "definition":"hey are gymnosperms, cone-bearing seed plants.", "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Abies_lasiocarpa_5922.JPG/800px-Abies_lasiocarpa_5922.JPG",
+            "parent":"Spermatophyte"
+        },
+    "Ginkophyta":
+        {
+            "type":"clade",
+            "definition":"Ginkgophyte foliage has stayed largely consistent since the Mesozoic. Its historically wide territory makes it an important leaf morphology, and its unique stomata and isotopic profile give it a key role in recreations of the Mesozoic and Cenozoic. Leaf fossils that resemble the Ginkgophytes are known as Ginkgoites. There are similar, now extinct, morphogens, such as Sphenobaiera, which describes fan-shaped, deeply divided leaves without clear petioles", "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Ginkgo_biloba_male_flower.jpg/1920px-Ginkgo_biloba_male_flower.jpg",
+            "parent":"Spermatophyte"
+        },
+    "Gnetophyta":
+        {
+            "type":"clade",
+            "definition":"The two common characteristics most commonly used are the presence of enveloping bracts around both the ovules and microsporangia as well as a micropylar projection of the outer membrane of the ovule that produces a pollination droplet",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Pollen%C3%A7a_-_Ma-2210_-_Cap_de_Formentor_-_Ephedra_fragilis_05_ies.jpg/1920px-Pollen%C3%A7a_-_Ma-2210_-_Cap_de_Formentor_-_Ephedra_fragilis_05_ies.jpg",
+            "parent":"Spermatophyte"
+        },
+    "Magnoliophyta":
+        {
+            "type":"clade",
+            "definition":"Plats with flowers (enclosed ovules)",
+            "image":"https://upload.wikimedia.org/wikipedia/commons/a/a5/Flower_poster_2.jpg",
+            "parent":"Spermatophyte"
+            }
+        }
+    </script>
+    <script type="application/javascript">
+        var container=document.getElementById("container");
+        var _taxa="life";
+        
+        fillContainer();     
+        
+        function emptyContainer(){
+            var list = container;
+               while (list.hasChildNodes()) {
+                  list.removeChild(list.firstChild);
+               }
+            };
+        
+        function fillContainer(){
+            var divs=Taxa[_taxa]["children"];
+            divs.forEach(
+                function(el){
+                    var clase=Taxa[el]['type'];
+                    var taxon=el;
+                    var img=Taxa[el]["image"];
+                    var def=Taxa[el]["definition"];
+                    var parent=Taxa[el]["parent"];
+                    if (Taxa[el]["children"]){
+                        var children = Taxa[el]["children"]
+                    }
+                    var div1=document.createElement("div");
+                    div1.style.display="block";
+                    var div11=document.createElement("div");
+                    
+                    var div12=document.createElement("div");
+                    var imtaxa = document.createElement("img");
+                    div1.appendChild(div11);
+                    div1.appendChild(div12);
+                    div11.appendChild(imtaxa);
+                    div11.style.display="inline-block";
+                    container.appendChild(div1);
+                    imtaxa.setAttribute('height','200px');
+                    imtaxa.setAttribute('width','200px');
+                    imtaxa.setAttribute('src',img);
+                    if (children){
+                        imtaxa.addEventListener("click", setTaxa);
+                        imtaxa.taxa=el;
+                    };
+                    div12.innerHTML=taxon+"\n"+def;
+                    div12.style.display="inline-block";
+                }
+            );
+        }
+        function setTaxa(e){
+            emptyContainer();
+            _taxa=e.target.taxa;
+            fillContainer();
+        }
+    </script>
+</html>

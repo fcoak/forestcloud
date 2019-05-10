@@ -1,0 +1,185 @@
+<html>
+    <head>
+        <style type="text/css">
+            #menu{
+                width: 1000px;
+            }
+            .menuitem{
+                border: solid black 3px;
+                border-radius: 5px;
+                display: inline-block;
+                width: 18%;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="menu">
+            <div id="menuabout" class="menuitem" onclick="showmenu('about');">
+                About
+            </div>
+            <div id="menumates" class="menuitem" onclick="showmenu('mates');">
+                Mates
+            </div>
+            <div id="menuprojects" class="menuitem" onclick="showmenu('projects');">
+                Projects
+            </div>
+            <div id="menublogs" class="menuitem" onclick="showmenu('blogs');">
+                Blogs
+            </div>
+            <div id="menucontacus" class="menuitem" onclick="showmenu('contactus');">
+                Contact us
+            </div>
+        </div>
+        <div id="about" class="content">
+            <form action="/signup" method="post">
+              <p>
+                <label>Title</label><br>
+                <label>
+                  <input type="radio" name="title" value="mr">
+                  Mr
+                </label>
+                <label>
+                  <input type="radio" name="title" value="mrs">
+                  Mrs
+                </label>
+                <label>
+                  <input type="radio" name="title" value="miss">
+                  Miss
+                </label>
+              </p>
+              <p>
+                <label>First name</label><br>
+                <input type="text" name="first_name">
+              </p>
+              <p>
+                <label>Last name</label><br>
+                <input type="text" name="last_name">
+              </p>
+              <p>
+                <label>Email</label><br>
+                <input type="email" name="email" required>
+              </p>
+              <p>
+                <label>Phone number</label><br>
+                <input type="tel" name="phone">
+              </p>
+              <p>
+                <label>Password</label><br>
+                <input type="password" name="password">
+              </p>
+              <p>
+                <label>Country</label><br>
+                <select>
+                  <option>China</option>
+                  <option>India</option>
+                  <option>United States</option>
+                  <option>Indonesia</option>
+                  <option>Brazil</option>
+                </select>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" value="terms">
+                  I agree to the <a href="/terms">terms and conditions</a>
+                </label>
+              </p>
+              <p>
+                <button>Sign up</button>
+                <button type="reset">Reset form</button>
+              </p>
+            </form>
+        </div>
+        <div id="mates" class="content">
+            <video width="520" height="240" controls>
+              <source src="../video/barcelona.mp4" type="video/mp4">
+              <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+        </div>
+        <div id="projects" class="content">
+            <table>
+                 <caption>A complex table</caption>
+                 <thead>
+                  <tr>
+                   <th colspan="3">Invoice #123456789</th>
+                   <th>14 January 2025
+                  </tr>
+                  <tr>
+                   <td colspan="2">
+                    <strong>Pay to:</strong><br>
+                    Acme Billing Co.<br>
+                    123 Main St.<br>
+                    Cityville, NA 12345
+                   </td>
+                   <td colspan="2">
+                    <strong>Customer:</strong><br>
+                    John Smith<br>
+                    321 Willow Way<br>
+                    Southeast Northwestershire, MA 54321
+                   </td>
+                  </tr>
+                 </thead>
+                 <tbody>
+                  <tr>
+                   <th>Name / Description</th>
+                   <th>Qty.</th>
+                   <th>@</th>
+                   <th>Cost</th>
+                  </tr>
+                  <tr>
+                   <td>Paperclips</td>
+                   <td>1000</td>
+                   <td>0.01</td>
+                   <td>10.00</td>
+                  </tr>
+                  <tr>
+                   <td>Staples (box)</td>
+                   <td>100</td>
+                   <td>1.00</td>
+                   <td>100.00</td>
+                  </tr>
+                 </tbody>
+                 <tfoot>
+                  <tr>
+                   <th colspan="3">Subtotal</th>
+                   <td> 110.00</td>
+                  </tr>
+                  <tr>
+                   <th colspan="2">Tax</th>
+                   <td> 8% </td>
+                   <td>8.80</td>
+                  </tr>
+                  <tr>
+                   <th colspan="3">Grand Total</th>
+                   <td>$ 118.80</td>
+                  </tr>
+                 </tfoot>
+            </table>
+        </div>
+        <div id="blogs" class="content">
+            to be continued....
+        </div>
+        <div id="contactus" class="content">
+            come to the cloud
+        </div>
+        <script type="application/javascript">
+        function hidedivs(){
+            document.getElementById('about').style.display="none"
+            document.getElementById('mates').style.display="none";
+            document.getElementById('projects').style.display="none";
+            document.getElementById('blogs').style.display="none";
+            document.getElementById('contactus').style.display="none";
+        };
+        hidedivs();
+        function showmenu(el){
+            hidedivs();
+            el=document.getElementById(el);
+            el.style.visibility="visible";
+            el.style.display="block";
+        }
+        
+        </script>
+        <script  type="application/javascript" src="../js/portal.js"></script>
+    </body>
+</html>

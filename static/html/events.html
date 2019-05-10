@@ -1,0 +1,37 @@
+<html>
+<body>
+
+    <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button>
+
+    <p id="demo"></p>
+    <hr>
+    <input type="text" id="first" class="number" name="introduce"> +
+    <input type="text" id="second" class="number" name="introduce"> =
+    <input type="text" id="third" class="number" name="introduce">
+    <input type="button" id="clicksumar" class="boton"  name="false sum" onclick="clicksum()" value="Sum">
+    <hr>
+    
+    <form action="/sendtree" method="post" target="_blank">
+        <label>specie</label><input type="text" name="sp" id="specie"><br>
+        <label>latitude</label><input type="number" name="lat" id="specie"><br>
+        <label>longitude</label><input type="number" name="lon" id="specie"><br>
+        <label>altitude</label><input type="number" name="alt" id="specie"><br>
+        <label>mate</label><input type="text" name="mate" id="specie"><br>
+        <input type="submit" >
+    </form>
+    
+
+</body>
+    <script type="application/javascript">
+    function clickclick(){
+        var el = document.getElementById('demo');
+        el.innerHTML=Date();
+    };
+    function clicksum(){
+        var el1 = document.getElementById('first').value;
+        var el2 = document.getElementById('second').value;
+        var el3 = document.getElementById('third').value=el1+el2+el1;
+    }
+        
+    </script>
+</html>

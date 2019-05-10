@@ -1,0 +1,245 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+.header {
+  background-color: whitesmoke;
+  color: black;
+  padding: 15px;
+  border: solid black 3px;
+  border-radius: 10%;
+}
+
+.menu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  padding: 8px;
+  margin-bottom: 7px;
+  background-color: transparent;
+  color: black;
+  border: solid black 3px;
+  border-radius: 10%;
+}
+
+.menu li:hover {
+  border: solid black 6px;
+}
+
+.app{
+    padding: 8px;
+  margin-bottom: 7px;
+  background-color: transparent;
+  color: black;
+  border: solid black 3px;
+  border-radius: 10%;
+    }    
+.app:hover {
+  border: solid black 6px;
+}
+    
+    
+.aside {
+  background-color: transparent;
+  padding: 15px;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  border: solid black 3px;
+  border-radius: 10%;
+    }
+
+.footer {
+  background-color: whitesmoke;
+  color: black;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px;
+  border: solid black 3px;
+  border-radius: 10%;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {width: 8.33%;}
+  .col-s-2 {width: 16.66%;}
+  .col-s-3 {width: 25%;}
+  .col-s-4 {width: 33.33%;}
+  .col-s-5 {width: 41.66%;}
+  .col-s-6 {width: 50%;}
+  .col-s-7 {width: 58.33%;}
+  .col-s-8 {width: 66.66%;}
+  .col-s-9 {width: 75%;}
+  .col-s-10 {width: 83.33%;}
+  .col-s-11 {width: 91.66%;}
+  .col-s-12 {width: 100%;}
+}
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Forest Cloud Berkeley</h1>
+</div>
+
+<div class="row">
+  <div class="col-2 col-s-2 menu">
+    <ul>
+      <li onclick="showdiv('thecloud');" >The Cloud</li>
+      <li onclick="showdiv('themates');">The Mates</li>
+      <li onclick="showdiv('thetrees');">The Trees</li>
+      <li onclick="showdiv('theapps');">The Apps</li>
+      <li onclick="showdiv('theletters');">The Letters</li>
+      <li onclick="showdiv('thepictures');">The Pictures</li>
+      <li onclick="showdiv('theart');">The Art</li>
+      <li onclick="showdiv('themessages');">The Messages</li>
+      <li onclick="showdiv('otherclouds');">Other Clouds</li>
+    </ul>
+  </div>
+
+  <div id="thes" class="col-7 col-s-10">
+    <div id="thecloud" >
+      <h2>The Cloud</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    <div id="themates" >
+      <h2>The Mates</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    <div id="thetrees" >
+      <h2>The Trees</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    <div id="theapps" >
+      <h2 class="menu">The Apps</h2>
+         <ul>
+              <li id="treemap" class="app" onclick="mapatree();">
+                  <a href="maptree.html">This application will allow you to map your tree.</a>
+              </li>
+              <li id="treespecie" class="app">
+                  <a href="taxonomy.html">This application will allow you to classify your tree.</a>
+                  
+              </li>
+            <li id="treediameter" class="app">
+                  This application will allow you to calculate the diameter of the bole of the tree.
+              </li>
+            <li id="treeheight" class="app">
+                  This application will allow you to calculate the height of the tree
+              </li>
+            <li id="treedatabase" class="app">
+                  This application will allow you to upload the tree data
+              </li>
+            <li id="treepictures" class="app">
+                  This application will allow you to take pictures of your tree.
+              </li>
+            <li id="treehistory" class="app">
+                  This application will allow you to record the tree history.
+              </li>
+         </ul>
+    </div>
+    <div id="theletters" >
+      <h2>The Letters</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    <div id="theart" >
+      <h2>The Art</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    <div id="thepictures" >
+      <h2>The Pictues</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    <div id="themessages" >
+      <h2>The Messages</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    <div id="otherclouds" >
+      <h2>Other Clouds</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+  </div>
+  
+    
+    
+  <div class="col-3 col-s-12">
+    <div id="thecloud" class="aside">
+      <h2>Forest Latest News</h2>
+      <p>The Berkeley Forest Cloud is up and running.</p>
+      
+    </div>
+    
+    
+  </div>
+</div>
+
+<div class="footer">
+  <p>Support the trees .. and the trees will support you.</p>
+</div>
+
+</body>
+    <script type="application/javascript">
+        var _state="main"
+        var _main= Array.from(document.getElementById("thes").children);
+        function hidedivs(){
+            _main.forEach(function(el){el.style.display="none"});
+        };
+        function showdiv(el){
+            hidedivs();
+            document.getElementById(el).style.display="block";       
+        };
+        hidedivs();
+        showdiv("thecloud");
+        
+    </script>
+
+</html>

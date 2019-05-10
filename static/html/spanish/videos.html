@@ -1,0 +1,35 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div>
+            <form >
+                <label for="songurl">List of songs/label>
+                <input type="text" name="cheese" id="songurl">
+                <input type="button" value="load video" name="load video" onclick="loadvideo();">
+                <select id="listsongs">
+                </select>
+                <video id="video" width="320" height="240" controls crossorigin="anonymous">>
+                  <source src="" type="">
+                Your browser does not support the video tag.
+                </video>
+            </form>
+        </div>
+    </body>
+    <script type="application/javascript">
+        var songs =['Jose Alfredo Jimenez - El Rey.mp4', 'JARABE DE PALO - DEPENDE.mp4', 'Javier Krahe - Como Ulises.mp4', 'Luis Fonsi - Despacito ft. Daddy Yankee.mp4', 'Ruben Blades -Pedro navaja original..mp4', '.DS_Store', 'Manu Chao - Clandestino.mp4', 'Caetano Veloso - Cucurrucucu Paloma (Hable Con Ella).mp4', 'Bebe - Malo (Videoclip Oficial).mp4', 'JARABE DE PALO - AGUA.mp4', 'Carlos Vives, Shakira - La Bicicleta.mp3', 'Calle 13 - Latinoamérica.mp3', 'Pablo Milanes Yolanda.mp4', 'Manu Chao - Welcome to Tijuana.mp4', 'joan manuel serrat - mediterraneo.mp3', 'Juan Luis Guerra - La Bilirrubina.mp4', 'Carlos Vives - Pa Mayte (Oficial) (1995).mp3', 'Les Luthiers - Teorema de Thales .mp4', 'Kevin Johansen - Cumbiera Intelectual (Videoclip).mp4', 'JARABE DE PALO - LA FLACA (Video Oficial).mp4', 'Juan Luis Guerra - Ojala que llueva café.mp4', 'Estopa - Vino Tinto.mp4', 'Las Casitas del Barrio Alto - Victor Jara.mp4'];
+        var selecttag=document.getElementById("listsongs");
+        songs.forEach(function(el){
+            var option = document.createElement("option");
+            option.text = el;
+            selecttag.add(option);
+        }); 
+        
+        function loadvideo(){;
+            var source=document.getElementById('songurl').value;
+            var vid=document.getElementById('video');
+            vid.src=source;
+        }
+    </script>
+
+</html>
