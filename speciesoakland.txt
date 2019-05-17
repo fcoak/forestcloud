@@ -194,3 +194,9 @@ Apricot tree
 Agave sp
 Almond tree
 Prunus cerasifera
+Malus halliana (Hall Crabapple)
+Eriobotrya japonica
+Juniperus ashei
+Prunus persica
+Ficus carica
+Tibouchina semidecandra
